@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name       Find and replace editing tool
-// @namespace  http://use.i.E.your.homepage/
-// @version    0.1
-// @description  A simple tool to make editing posts easier and faster.
-// @require http://code.jquery.com/ui/1.11.0/jquery-ui.js
+// @name          Find and replace editing tool
+// @namespace     http://use.i.E.your.homepage/
+// @version       0.1
+// @description   A simple tool to make editing posts easier and faster.
+// @require       http://code.jquery.com/ui/1.11.0/jquery-ui.js
 // @match http*://*.stackoverflow.com/*
 // @match http*://*.serverfault.com/*
 // @match http*://*.superuser.com/*
@@ -14,7 +14,7 @@
 // @match http*://stackapps.com/*
 // @copyright  2014+, Mhmd
 // ==/UserScript==
-
+try{
 window.requestAnimationFrame = (function(){
     return  window.requestAnimationFrame       ||
             window.webkitRequestAnimationFrame ||
@@ -25,6 +25,7 @@ window.requestAnimationFrame = (function(){
               window.setTimeout(callback, 100);
             };
 })();
+}catch(e){ return;}
 function addGlobalStyle(css) {
     var head, style;
     head = document.getElementsByTagName('head')[0];
@@ -96,8 +97,7 @@ $html = $(function() {/*
     </div>*/}.toString()
              .slice(15,-3))
              .appendTo('body')
-             .draggable()
-             
+             .draggable()             
     
 $button =   $('<button id="find-button" title="Find & Replace"></button>').css({
     position: 'fixed',
