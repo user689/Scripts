@@ -2,7 +2,7 @@
 // @name          Find and replace editing tool
 // @namespace     http://use.i.E.your.homepage/
 // @version       0.1
-// @description   A simple tool to make editing posts easier and faster.
+// @description   A javascript tool to make editing posts easier and faster.
 // @require       http://code.jquery.com/ui/1.11.0/jquery-ui.js
 // @match http*://*.stackoverflow.com/*
 // @match http*://*.serverfault.com/*
@@ -141,10 +141,6 @@ ul.checkbox li {
   margin-left: 20px; 
   list-style: none; 
 }
-label:hover, label:active, input:hover+label, input:active+label{ 
-  background-color: lightyellow; 
-  border: 1px gray solid; 
-} 
   
 */}.toString()
    .slice(14,-3))                                                        
