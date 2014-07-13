@@ -167,6 +167,6 @@ $("#find-and-replace-form").submit(function(e) {
                                     $textarea.val($textarea.val().replace($regex, $replace))
                                              .focus();
                                     $('#find').focus();
-                            }else{ alert("no matches found"); }
+                            }else{ alert("no matches found");$('#find').focus(); }
                             return false;
 });
