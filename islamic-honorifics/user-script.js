@@ -28,7 +28,7 @@ var script = function($) {
          
     ]
 
-    $(document).on('input propertychange paste', 'textarea.wmd-input', function(){
+    $(document).on('blur', 'textarea.wmd-input', function(){
         $textarea = $(this)
         $.each(abbrev, function(_, item){
             regex = new RegExp("\\[:(" + item[0] + ")\\]", "gi")
